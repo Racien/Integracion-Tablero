@@ -15,7 +15,9 @@ public class FiguraL {
       	
  	};
  
- 	// Se definene los puntos de coordenadas iniciales de la figura
+    
+    
+ 	// Se de.finene los puntos de coordenadas iniciales de la figura
  	private int[][][] plantilla_de_coordenadas;
  
      // Contiene las coordenadas de la pieza
@@ -49,11 +51,12 @@ public class FiguraL {
       */
      public void asignarFigura(Figura forma) 
      {
-     	// Plantilla de coordenadas relativas de cada una de las formas enumeradas en Figuras
+     	// Plantilla de coordenadas para la figura L
            plantilla_de_coordenadas = new int[][][] {
      	
      		
      		//Figura L
+                 //            x         x  x      x
      		{ {-1,-1 }, { 0,-1 }, { 0, 0 }, { 0, 1 } },
    
  		};
@@ -67,11 +70,15 @@ public class FiguraL {
          		coordenadas[i][j] = plantilla_de_coordenadas[forma.ordinal()][i][j];
          	}
          }
+         
+         
           
          forma_actual = forma;
     }
  
      /**
+      
+      
       * Asignamos la posicion X a una de las 4 coordenadas relativas de la pieza 
       * 
       * @param posicion_relativa : Coordenada relativa a modificar
@@ -79,7 +86,7 @@ public class FiguraL {
       */
      private void asignarX(int posicion_relativa, int x) 
      { 
-     	coordenadas[posicion_relativa][0] = x; 
+     	coordenadas[posicion_relativa][1/2] = x; /* camibamos los datos de x como indica el tablero*/
  	}
      
      /**
